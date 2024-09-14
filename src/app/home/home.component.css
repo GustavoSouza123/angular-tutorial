@@ -6,7 +6,7 @@
   margin-top: 50px;
   justify-content: space-around;
 }
-input[type="text"] {
+input[type='text'] {
   border: solid 1px var(--primary-color);
   padding: 10px;
   border-radius: 8px;
@@ -21,23 +21,23 @@ button {
   color: white;
   border-radius: 8px;
   cursor: pointer;
-  transition: .2s;
+  transition: 0.2s;
 }
 button:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 @media (min-width: 500px) and (max-width: 768px) {
   .results {
     grid-template-columns: repeat(2, 1fr);
   }
-  input[type="text"] {
+  input[type='text'] {
     width: 70%;
-  }   
+  }
 }
 
 @media (max-width: 499px) {
   .results {
     grid-template-columns: 1fr;
-  }    
+  }
 }

@@ -1,8 +1,8 @@
-import {Injectable} from '@angular/core';
-import {HousingLocation} from './housinglocation';
+import { Injectable } from '@angular/core';
+import { HousingLocation } from './housinglocation';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HousingService {
   readonly baseUrl = 'https://angular.dev/assets/images/tutorials/common';
@@ -114,8 +114,10 @@ export class HousingService {
     return this.housingLocationList;
   }
   getHousingLocationById(id: number): HousingLocation | undefined {
-    return this.housingLocationList.find((housingLocation) => housingLocation.id === id);
+    return this.housingLocationList.find(
+      (housingLocation) => housingLocation.id === id
+    );
   }
-  
-  constructor() { }
+
+  constructor() {}
 }
