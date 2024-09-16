@@ -6,7 +6,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-housing-location',
   standalone: true,
-  imports: [RouterLink],
+  imports: [CommonModule, RouterLink],
   template: `
     <section class="listing">
       <img
