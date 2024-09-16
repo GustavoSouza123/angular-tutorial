@@ -11,10 +11,15 @@ import { HousingService } from '../housing.service';
   template: `
     <section>
       <form>
-        <input type="text" placeholder="Filter by city" #filter />
+        <input
+          type="text"
+          placeholder="Filter by city"
+          (keydown)="handleKeyDown($event, filter.value)"
+          #filter
+        />
         <button
-          class="primary"
           type="button"
+          class="primary"
           (click)="filterResults(filter.value)"
         >
           Search
@@ -52,5 +57,12 @@ export class HomeComponent {
     );
 
     console.log(this.filteredLocationList);
+  }
+
+  handleKeyDown($event: any, text: string) {
+    if ($event.keyCode === 13) {
+      $event.preventDefault();
+      this.filterResults(text);
+    }
   }
 }
